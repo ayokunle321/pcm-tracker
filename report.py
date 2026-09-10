@@ -386,20 +386,14 @@ def main():
                     + "".join(inner) + "</td></tr>")
     body.append("</tbody></table>")
 
-    showing = (f"{len(rows)} commits measured"
-               if len(visible) == len(rows) else
-               f"the {len(visible)} most recent of {len(rows)} "
-               f"commits measured")
-
     page = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PCM tracker</title><style>{CSS}</style></head><body>
 <header>
 <h1>PCM tracker</h1>
-<div class="sub">{showing} on one synthetic <code>-fmodules</code> corpus.
-Click a row for the block and record breakdown against the commit before it.
-</div>
+<div class="sub">Click a row for the block and record breakdown, from
+<code>llvm-bcanalyzer</code>, against the commit before it.</div>
 </header>
 <main>{''.join(body)}</main>
 <script>{JS}</script></body></html>"""
