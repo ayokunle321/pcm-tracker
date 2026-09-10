@@ -7,7 +7,7 @@ ORDER=${1:-dedup-squashed~21..dedup-squashed}
 cd "$HERE" || exit 1
 while true; do
   newest=$(ls -t data/*.json 2>/dev/null | head -1)
-  if [ -n "$newest" ] && { [ ! -f site/index.html ] || [ "$newest" -nt site/index.html ]; }; then
+  if [ -n "$newest" ] && { [ ! -f docs/index.html ] || [ "$newest" -nt docs/index.html ]; }; then
     python3 report.py --order "$ORDER"
   fi
   sleep 20

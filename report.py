@@ -265,8 +265,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "data"))
+    # GitHub Pages will serve a branch's root or its docs directory and
+    # nothing else, so the page is written where it can be published from.
     ap.add_argument("--out", default=os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), "site", "index.html"))
+        os.path.dirname(os.path.abspath(__file__)), "docs", "index.html"))
     ap.add_argument("--repo", default="/home/ayo/llvm-project")
     ap.add_argument("--order", default=None,
                     help="git range fixing row order, e.g. base..HEAD")
