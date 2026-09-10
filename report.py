@@ -217,7 +217,7 @@ def breakdown(cur, prev, key, limit, min_bytes):
             rows.append((y - x, k, x, y, ca.get(k, 0), cb.get(k, 0)))
     rows.sort(key=lambda r: r[0])
     if not rows:
-        return '<div class="none">nothing moved</div>'
+        return '<div class="none">no change</div>'
     out = ['<table class="brk">']
     for d, k, x, y, na, nb in rows[:limit]:
         p = (d / x * 100) if x else 0
