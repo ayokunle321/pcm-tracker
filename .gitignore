@@ -1,0 +1,10 @@
+# The corpus is emitted by workload/generate.py, so it is rebuilt rather than
+# carried in the repository.
+workload/corpus/
+
+# Measurements written by an older profiler. Kept aside rather than deleted so
+# they can be looked at, but they are not comparable with current ones.
+data-wip/
+
+__pycache__/
+*.pyc
