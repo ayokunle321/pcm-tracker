@@ -14,5 +14,5 @@ For each selected commit, `pcm-tracker` records:
 - **Total PCM size** on disk
 - **Loaded source-location (`SLoc`) bytes**
 - **Peak memory** for writing and reading PCMs, measured separately
-- **Instructions retired** for writing and reading, when `perf` is available
+- **Instructions retired** for writing and reading.
 - **Size of each PCM block and record kind**, using `llvm-bcanalyzer`
